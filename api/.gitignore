@@ -46,3 +46,7 @@ Thumbs.db
 # Debugger files
 __debug_bin
 *.prof
+
+# Sqlite
+*.sqlite3
+*.db
