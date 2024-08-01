@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/gin-contrib/cors"
+
 	"github.com/gin-gonic/gin"
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -39,6 +41,8 @@ func setupDB() error {
 func main() {
 	// Initialize Gin router
 	r := gin.Default()
+
+	r.Use(cors.Default())
 
 	// Setup database
 	err := setupDB()
